@@ -24,9 +24,16 @@ model-viewer {
     width: 90%;            /* 横幅：画面の90% */
     height: 60vh;          /* 高さ：画面の高さの60% */
     max-width: 800px;      /* PCで見ても大きくなりすぎない制限 */
-    background-color: #ffffff;
     border-radius: 15px;   /* 角を少し丸く */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 影をつけて立体感を出す */
+}
+
+/* ポスターコンテンツのスタイル */
+.model-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 /* スマホ（画面幅600px以下）用の微調整 */
@@ -39,6 +46,7 @@ model-viewer {
         margin-top: 10px;
     }
 }
+
 
 /* --- 💡 追加：操作説明ガイドのスタイル --- */
 .guide-container {
@@ -86,13 +94,16 @@ model-viewer {
 
 /* スマホ用のレスポンシブ微調整 */
 @media (max-width: 600px) {
-    .guide-container {
+    /* .guide-container が存在する場合のみ使用 */
+    /* .guide-container {
         width: 95%;
         padding: 12px 10px;
-    }
-    .guide-item p {
-        font-size: 10px; /* スマホでは文字を少し小さくして収める */
-    }
+    } */
+
+    /* .guide-item が存在する場合のみ使用 */
+    /* .guide-item p {
+        font-size: 10px; 
+    } */
 }
 
 /* フッター */
