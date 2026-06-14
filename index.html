@@ -30,22 +30,22 @@
         </div>
     </div>
 
-    <!-- 3Dモデル -->
-    <model-viewer 
-        src="img/text transfer sample_circle.glb" 
-        ios-src="img/text transfer sample_circle.usdz"
-        ar ar-modes="webxr scene-viewer quick-look"
-        orientation="0deg 0deg 180deg"
-        auto-rotate camera-controls 
-        loading="eager">
-        <div slot="poster" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <p>3Dモデルを読み込み中...</p>
-        </div>
-    </model-viewer>
+<!-- 3Dモデル -->
+<model-viewer 
+    src="img/text_transfer_sample_circle.glb" 
+    ios-src="img/text_transfer_sample_circle.usdz"
+    ar ar-modes="webxr scene-viewer quick-look"
+    orientation="0deg 0deg 0deg"
+    auto-rotate camera-controls 
+    loading="eager">
+    <div slot="poster" class="model-poster">
+        <p>3Dモデルを読み込み中...</p>
+    </div>
+</model-viewer>
 
-     <footer>
-        <p>&copy; 2026 3i.野村貫太郎事務所</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 3i.野村貫太郎事務所</p>
+</footer>
 
 </body>
 </html>
