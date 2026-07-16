@@ -112,3 +112,48 @@ footer {
     font-size: 0.8rem;
     color: #999;
 }
+
+/* ==========================================================================
+   追加：AR体験手順＆注意点セクションのスタイル
+   ========================================================================== */
+
+/* テキスト幅を他の要素（90%, max 800px）と揃え、中央配置 */
+.ar-steps, .ar-notes {
+    width: 90%;
+    max-width: 800px;
+    margin: 15px auto;
+    text-align: left;
+    font-size: 13px;
+    color: #4a4a4a; /* 操作方法ガイドのh2色とトーンを統一 */
+    box-sizing: border-box;
+}
+
+/* 各ブロックの見出し：テーマカラー（ピンク）をアクセントに使用 */
+.ar-steps h3, .ar-notes h3 {
+    font-size: 14px;
+    color: #c217c8; /* タイトルのメインカラーと統一 */
+    border-bottom: 1px solid #c217c8;
+    padding-bottom: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* リストのパディングと行間の設定 */
+.ar-steps ol, .ar-notes ul {
+    padding-left: 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 箇条書きの各項目間の余白 */
+.ar-steps li, .ar-notes li {
+    margin-bottom: 8px;
+}
+
+/* スマホ用（画面幅600px以下）のサイズ微調整 */
+@media (max-width: 600px) {
+    .ar-steps, .ar-notes {
+        width: 95%; /* スマホ時には他の要素同様に95%に広げる */
+        font-size: 12px;
+    }
+}

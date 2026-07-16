@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purpleball</title>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-    <!-- HTMLのhead内にこれを書く -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- タイトル -->
     <h1>PURPLE BALL</h1>
+
+    <model-viewer 
+        src="img/text_transfer_sample_circle.glb" 
+        ios-src="img/text_transfer_sample_circle.usdz"
+        ar ar-modes="webxr scene-viewer quick-look"
+        orientation="0deg 0deg 0deg"
+        auto-rotate camera-controls 
+        loading="eager">
+        <div slot="poster" class="model-poster">
+            <p>3Dモデルを読み込み中...</p>
+        </div>
+    </model-viewer>
 
     <div class="guide-container">
         <h2>💡 ARモードでの操作方法（iPhone / iPad）</h2>
@@ -30,27 +40,29 @@
         </div>
     </div>
 
-<!-- 3Dモデル -->
-<model-viewer 
-    src="img/text_transfer_sample_circle.glb" 
-    ios-src="img/text_transfer_sample_circle.usdz"
-    ar ar-modes="webxr scene-viewer quick-look"
-    orientation="0deg 0deg 0deg"
-    auto-rotate camera-controls 
-    loading="eager">
-    <div slot="poster" class="model-poster">
-        <p>3Dモデルを読み込み中...</p>
-    </div>
-</model-viewer>
+    <section class="ar-steps">
+        <h3>📱 スマートフォンでのAR体験方法</h3>
+        <ol>
+            <li><strong>ARモードを起動:</strong> 3Dモデル内（または右下）に表示される「AR（またはキューブ型のアイコン）」ボタンをタップします。</li>
+            <li><strong>空間を認識させる:</strong> カメラが起動したら、配置する場所にゆっくりスマホを向けます。自動的に壁の位置が認識され、モデルが配置されます。</li>
+        </ol>
+    </section>
 
-<footer>
-    <p>&copy; <span id="current-year"></span> 3i.野村貫太郎事務所</p>
-</footer>
+    <section class="ar-notes">
+        <h3>⚠️ ご利用前の注意点</h3>
+        <ul>
+            <li><strong>推奨ブラウザ:</strong> 必ず <strong>Safari</strong>（iPhone）または <strong>Chrome</strong>（Android）で開いてください。</li>
+            <li><strong>SNSアプリからのアクセス:</strong> LINEやInstagram等のアプリ内画面ではAR機能が動きません。画面右上（または右下）にある「…（3点リーダー）」をタップし、「Safariで開く」または「ブラウザで開く」を選択してからお楽しみください。</li>
+            <li><strong>Android端末をご利用の方へ:</strong> 一部の機種では、初回のみGoogleのARアプリ（Google Play開発者サービス(AR)）のインストールを求められる場合があります。画面の指示に従って進めてください。</li>
+        </ul>
+    </section>
 
-<script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
+    <footer>
+        <p>&copy; <span id="current-year"></span> 3i.野村貫太郎事務所</p>
+    </footer>
 
-
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
